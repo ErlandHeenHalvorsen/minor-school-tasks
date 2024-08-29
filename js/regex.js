@@ -9,6 +9,6 @@ let newStr = str.replace(regex, "");
 console.log(newStr);
 
 const mobile = `+4745403110`;
-const regex2 = /(\+)(47)(4|9)(\d{7})/gm;
+const regex2 = /(\+)(47)(4|9)(\d{7})(?!\d)/gm;
 let match = mobile.match(regex2);
 console.log(match);
