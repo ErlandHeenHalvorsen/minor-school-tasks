@@ -10,7 +10,7 @@ class HelloWorld extends HTMLElement {
     shadow.appendChild(container);
   }
 }
-//customElements.define("hello-world", HelloWorld);
+customElements.define("hello-world", HelloWorld);
 
 class FilledCircle extends HTMLElement {
   constructor() {
@@ -32,3 +32,5 @@ class FilledCircle extends HTMLElement {
   }
 }
 customElements.define("filled-circle", FilledCircle);
+
+
