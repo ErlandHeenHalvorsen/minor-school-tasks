@@ -1,33 +1,48 @@
 class book {
+  #title;
+  #author;
+  #isbn;
+  #available;
   constructor(title, author, isbn) {
-    this.title = title;
-    this.author = author;
-    this.isbn = isbn;
-    this.available = true;
+    this.#title = title;
+    this.#author = author;
+    this.#isbn = isbn;
+    this.#available = true;
   }
   getInfo() {
-    return `${this.title} by ${this.author}, ISBN: ${this.isbn}`;
+    return `${this.#title} by ${this.#author}, ISBN: ${this.#isbn}`;
   }
 
   borrowBook() {
-    if (this.available) {
-      this.available = false;
-      console.log(`you have borrowed ${this.title}`);
+    if (this.#available) {
+      this.#available = false;
+      console.log(`you have borrowed ${this.#title}`);
     } else {
-      console.log(`sorry, ${this.title} is not available`);
+      console.log(`sorry, ${this.#title} is not available`);
     }
   }
 
   returnBook() {
-    if (!this.available) {
-      this.available = true;
-      console.log(`you have returned ${this.title}`);
+    if (!this.#available) {
+      this.#available = true;
+      console.log(`you have returned ${this.#title}`);
     } else {
-      console.log(`${this.title} is already available`);
+      console.log(`${this.#title} is already available`);
     }
   }
 
   isAvailable() {
-    return this.available;
+    return this.#available;
+  }
+}
+
+class eBook extends book {
+  #fileSize;
+  constructor(title, author, isbn, fileSize) {
+    super(title, author, isbn);
+    this.#fileSize = fileSize;
+  }
+  getInfo() {
+    return `${super.getInfo()}, fileSize: ${this.#fileSize} MB`;
   }
 }
