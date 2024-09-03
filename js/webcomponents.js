@@ -1,7 +1,7 @@
 class HelloWorld extends HTMLElement {
   constructor() {
     super();
-    const shadow = this.attachShadow({ mode: "closed" });
+    const shadow = this.attachShadow({ mode: "open" });
     const container = document.createElement("div");
     container.setAttribute("class", "container");
     const greeting = document.createElement("p");
@@ -33,4 +33,20 @@ class FilledCircle extends HTMLElement {
 }
 customElements.define("filled-circle", FilledCircle);
 
-
+class myComponent extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    const style = document.createElement("style");
+    style.textContent = `
+    div {
+      font-size: 20px;
+      color: red;
+    }
+    `;
+    const div = document.createElement("div");
+    div.textContent = "Hello web-component!";
+    this.shadowRoot.append(style, div);
+  }
+}
+customElements.define("my-component", myComponent);
