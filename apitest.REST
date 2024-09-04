@@ -1,0 +1,8 @@
+POST https://v2.api.noroff.dev/auth/register
+Content-Type: application/json
+
+{
+    "name": "yallabravo"
+    "email": "halerl01002@stud.noroff.no",
+    "password": "fisketur2024"
+}
