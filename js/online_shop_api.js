@@ -16,7 +16,7 @@ async function authorize() {
     if (response.ok) {
       console.log("Registration successful");
     } else {
-      const errorData = await response.json(); // Parse the error response
+      const errorData = await response.json(); 
       console.error("Registration failed:", errorData);
     }
   } catch (error) {

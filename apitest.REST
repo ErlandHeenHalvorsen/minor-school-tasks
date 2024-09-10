@@ -1,8 +1,27 @@
+
+
+###
+POST https://v2.api.noroff.dev/auth/login
+Content-Type: application/json
+
+{
+  "email": "erlhal01002@stud.noroff.no",
+  "password": "fisketur2024"
+}
+### 
+GET https://v2.api.noroff.dev/social/profiles
+Content-Type: application/json
+
+###
+
 POST https://v2.api.noroff.dev/auth/register
 Content-Type: application/json
 
 {
-    "name": "yallabravo"
-    "email": "halerl01002@stud.noroff.no",
-    "password": "fisketur2024"
+    "name": "erlhal",
+    "email": "erlhal01002@stud.noroff.no",
+    "password": "12345678"
 }
+###
+
+GET https://v2.api.noroff.dev/status
